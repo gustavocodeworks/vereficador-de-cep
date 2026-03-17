@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            margin: 5px 0;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Digite seu CEP:</h2>
+    <input type="text" id="cep" oninput="this.value = this.value.replace (/[^0-9]/g,'')" maxlength="8" placeholder="Ex:010010001">
+        <button type="submit" onclick="buscarCEP()">Buscar</button> <br><br>
+
+            <input type="text" id="rua" placeholder="Rua" readonly><br><br>
+            <input type="text" id="bairro" placeholder="Bairro" readonly><br><br>
+            <input type="text" id="cidade" placeholder="Cidade" readonly><br><br>
+            <input type="text" id="estado" placeholder="Estado" readonly><br><br>
+
+    <script src="script.js"></script>
+</body>
+</html>
